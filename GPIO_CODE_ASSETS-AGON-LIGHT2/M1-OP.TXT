@@ -1,0 +1,23 @@
+   10 CLS : MODE 4
+   20 PUT &A0,0 : PUT &A1,0
+   30 PC_DR=&9E : PC_DDR=&9F :PUT PC_DDR,0
+   40 PROCDisplayTest
+   50 REM **** START PLAY  MAIN LOOP ****
+   60 REPEAT
+   70   PROCChaseLeds(0, 7, 1 )
+   80   PROCChaseLeds(7,0,-1)
+  120 UNTIL FALSE
+  125 :
+  130 DEF PROCDisplayTest
+  140 CLS
+  150 PRINT "GPIO MODE 1 OUT : PC-7 LED CHASER"
+  160 PRINT "PC_DR =&";~PC_DR;",";"PC-DDR =&";~PC_DDR;
+  170 ENDPROC
+  180 :
+  200 DEF PROCChaseLeds( start%, end%, incr%)
+  210 FOR X=start% TO end% STEP incr% 
+  220   T=TIME
+  230   PUT PC_DR,2^X : PRINT TAB(0,5) 2^X
+  240   REPEAT UNTIL TIME-T>20
+  250 NEXT X
+  260 ENDPROC
