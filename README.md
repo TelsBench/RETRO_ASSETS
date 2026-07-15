@@ -1,9 +1,10 @@
 Hi folks,
 
-This repository is for various documents etc which I want to host here along with assets with relation to the subject matter.
+My video below shows how to use GPIO PPINS ON AGON Light 2. This repo has various files demonstrated in the video
 
-Please visit my Youtube channel @TELSBENCH for various videos, I have not been going too long at the time of writing this Readme, but I'm getting 
-a bit more used to the process, the more I do.
+See Youtube Video  https://youtu.be/Ds2cnpb2M2U
+
+Or  visit my Youtube channel @TELSBENCH for various other tech videos.
 
 
 Peace - TEL.
